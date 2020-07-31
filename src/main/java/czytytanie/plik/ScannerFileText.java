@@ -31,6 +31,7 @@ public class ScannerFileText {
 				String[] words = line.split("\\s+");
 
 				for (String word : words) {
+					word = word.toLowerCase();
 					if (sortedMap.containsKey(word)) {
 						PairCountPosition pairCount = sortedMap.get(word);
 						pairCount.incremateCount();
